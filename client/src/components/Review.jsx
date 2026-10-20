@@ -1,7 +1,7 @@
 const LABELS = {
   correct: "Correct +1",
-  wrong: "Wrong −1",
-  unanswered: "Unanswered −1",
+  wrong: "Wrong 0",
+  unanswered: "Unanswered 0",
 };
 
 export default function Review({ review }) {

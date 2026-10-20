@@ -27,8 +27,8 @@ export default function Result({ result, onRetry }) {
 
         <div className="stats">
           <div><strong>{correct}</strong><span>Correct (+1)</span></div>
-          <div><strong>{incorrect}</strong><span>Wrong (−1)</span></div>
-          <div><strong>{unanswered}</strong><span>Unanswered (−1)</span></div>
+          <div><strong>{incorrect}</strong><span>Wrong (0)</span></div>
+          <div><strong>{unanswered}</strong><span>Unanswered (0)</span></div>
         </div>
 
         {late ? (

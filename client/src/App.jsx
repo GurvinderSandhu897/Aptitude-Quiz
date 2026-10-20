@@ -15,9 +15,9 @@ function StartScreen({ onStart }) {
       <h1>Aptitude Test</h1>
       <ul className="rules">
         <li>10 multiple-choice questions, 10 minutes in total</li>
-        <li>Correct answer: +1 &nbsp;·&nbsp; Wrong answer: −1</li>
+        <li>Correct answer: +1 &nbsp;·&nbsp; Wrong answer: 0</li>
         <li>Skip a question for no penalty. It comes back after the last one, once.</li>
-        <li>When time runs out, every unanswered question costs −1</li>
+        <li>When time runs out, every unanswered question costs 0</li>
       </ul>
       <button type="button" className="btn primary" onClick={onStart}>
         Start test

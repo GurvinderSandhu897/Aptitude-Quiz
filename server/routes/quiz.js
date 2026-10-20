@@ -6,6 +6,8 @@ import { generateQuestions, shuffle } from "../utils/generators.js";
 
 const router = express.Router();
 const TOTAL_QUESTIONS = 10;
+const WRONG_PENALTY = 0;        // points lost for a wrong answer
+const UNANSWERED_PENALTY = 0;   // points lost for an unanswered question
 const GENERATED_COUNT = 4;           // 4 generated + 6 from the bank
 const DURATION_SEC = 10 * 60;
 const GRACE_SEC = 15;   // allowance for network delay
@@ -91,9 +93,9 @@ router.post("/submit", async (req, res) => {
     const review = attempt.items.map((q) => {
       const selected = answerMap.get(String(q._id));
       const answered = Number.isInteger(selected);
-      if (!answered) { score -= 1; unanswered++; }
+      if (!answered) { score -= UNANSWERED_PENALTY; unanswered++; }
       else if (selected === q.correctIndex) { score += 1; correct++; }
-      else { score -= 1; incorrect++; }
+      else { score -= WRONG_PENALTY; incorrect++; }
       return {
         questionId: q._id,
         text: q.text,
