@@ -1,6 +1,6 @@
 # Aptitude Quiz Platform
 
-**Live demo:** https://aptitude-quiz-psi.vercel.app
+**Live demo:** [https://aptitude-quiz-psi.vercel.app](https://aptitude-quiz-tau.vercel.app/)
 
 > The backend runs on a free Render server, so the first load after a quiet period can take up to a minute while it wakes up.
 
