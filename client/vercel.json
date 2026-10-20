@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/api/:path*", "destination": "https://aptitude-quiz-api.onrender.com/api/:path*" },
+    { "source": "/images/:path*", "destination": "https://aptitude-quiz-api.onrender.com/images/:path*" }
+  ]
+}
