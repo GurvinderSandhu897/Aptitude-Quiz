@@ -1,10 +1,14 @@
 # Aptitude Quiz Platform
 
+**Live demo:** https://aptitude-quiz-psi.vercel.app
+
+> The backend runs on a free Render server, so the first load after a quiet period can take up to a minute while it wakes up.
+
 A timed aptitude test built with the MERN stack. Questions are different on every attempt.
 
 ## Features
 - 10 multiple-choice questions with a 10-minute countdown timer
-- Scoring: +1 correct, -1 wrong, -1 for each question unanswered when time runs out
+- Scoring: +1 for a correct answer, 0 for wrong or unanswered questions
 - Skip option with no penalty: skipped questions return after the last question (skips stack)
 - Random questions each run: a mix of questions from a database and procedurally generated ones (fresh numbers every time), with shuffled options
 - Image-based questions
@@ -17,6 +21,10 @@ A timed aptitude test built with the MERN stack. Questions are different on ever
 React (Vite), Node.js, Express, MongoDB (Mongoose)
 
 ## Getting started
+## Deployment
+- **Frontend:** Vercel (root directory `client`). `client/vercel.json` forwards `/api` and `/images` requests to the backend.
+- **Backend:** Render web service (root directory `server`, start command `npm start`)
+- **Database:** MongoDB Atlas (set as the `MONGO_URI` environment variable on Render)
 
 ### Prerequisites
 Node.js 18+ and MongoDB (local or Atlas)
